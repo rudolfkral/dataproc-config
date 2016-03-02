@@ -68,7 +68,6 @@ echo "And also HOME: $HOME"
 hash -r
 which conda
 conda config --set always_yes yes --set changeps1 no
-source $HOME/.bashrc
 
 echo "Updating conda..."
 conda update -q conda

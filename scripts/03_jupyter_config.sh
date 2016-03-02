@@ -4,12 +4,16 @@
 # Only run on the master node
 ROLE=$(/usr/share/google/get_metadata_value attributes/dataproc-role)
 if [[ "${ROLE}" == 'Master' ]]; then
+	source /etc/profile.d/conda_config.sh
+
 	# Install iPython Notebook and create a profile
 	cd
 	mkdir IPythonNB
 	cd IPythonNB
 	ipython profile create default
 	
+
+
 	# Set up configuration for iPython Notebook
 	echo "c = get_config()" >  /root/.ipython/profile_default/ipython_notebook_config.py
 	echo "c.NotebookApp.ip = '*'" >>  /root/.ipython/profile_default/ipython_notebook_config.py
