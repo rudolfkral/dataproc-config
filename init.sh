@@ -1,6 +1,6 @@
-#!bin/sh
+#!/bin/bash
 
 for each in scripts/*.sh
 do 
-	bash $each >> $HOME/init.log
+	bash $each | tee -a $HOME/init.log
 done
