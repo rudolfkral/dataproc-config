@@ -31,6 +31,7 @@ _EOF
 	# add it to starting scripts
 	touch /etc/profile.d/start_jupyter.sh
 	chmod +x /etc/profile.d/start_jupyter.sh
-	echo "nohup jupyter notebook --no-browser --ip=* --port=8123 > tee /var/log/python_notebook.log &" | tee -a /etc/profile.d/start_jupyter.sh
+	/var/log/python_notebook.log
+	echo "nohup jupyter notebook --no-browser --ip=* --port=8123 | tee -a /var/log/python_notebook.log &" | tee -a /etc/profile.d/start_jupyter.sh
 	/etc/profile.d/start_jupyter.sh
 fi
