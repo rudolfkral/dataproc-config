@@ -27,7 +27,7 @@ miniconda="$MINICONDA_VARIANT-$MINICONDA_VER-$OS_TYPE"
 
 # 1. Setup Miniconda Install
 ## 1.1 Define Miniconda install directory
-mkdir -p PROJ_DIR
+mkdir -p $PROJ_DIR
 
 ## 1.2 Setup Miniconda
 cd $PROJ_DIR
