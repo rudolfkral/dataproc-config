@@ -1,7 +1,6 @@
 #!/bin/bash
 
-for each in `ls scripts/*.sh | sort -V`
+for each in scripts/*.sh
 do 
-        echo "Running: $each"
 	bash $each | tee -a $HOME/init.log
 done
