@@ -17,7 +17,6 @@ if [[ "${ROLE}" == 'Master' ]]; then
 	echo "c.NotebookApp.port = 8123" >>  /root/.ipython/profile_default/ipython_notebook_config.py
 	
 	# Setup script for iPython Notebook so it uses the cluster's Spark
-        export ADD_JARS=gs://ai-bucket/dataproc/jars/*.jar
 	cat > /root/.ipython/profile_default/startup/00-pyspark-setup.py <<'_EOF'
 import os
 import sys
@@ -29,5 +28,5 @@ exec(compile(open(os.path.join(spark_home, 'python/pyspark/shell.py')).read(), o
 _EOF
 	
 	# Start iPython Notebook on port 8123
-	nohup ipython notebook --no-browser --ip=* --port=8123 > /var/log/python_notebook.log &
+	nohup jupyter notebook --no-browser --ip=* --port=8123 > tee /var/log/python_notebook.log &
 fi
