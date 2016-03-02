@@ -99,8 +99,7 @@ echo "spark.executorEnv.PYTHONHASHSEED=0" >> /etc/spark/conf/spark-defaults.conf
 ## 3. Ensure that Anaconda Python and PySpark play nice
 ### http://blog.cloudera.com/blog/2015/09/how-to-prepare-your-apache-hadoop-cluster-for-pyspark-jobs/
 echo "Ensure that Anaconda Python and PySpark play nice by all pointing to same Python distro..."
-echo "export PYSPARK_PYTHON=$CONDA_BIN_PATH/python" | tee -a  /etc/profile.d/conda_config.sh \ 
-    $HOME/.bashrc /etc/environment /usr/lib/spark/conf/spark-env.sh
+echo "export PYSPARK_PYTHON=$CONDA_BIN_PATH/python" | tee -a  /etc/profile.d/conda_config.sh $HOME/.bashrc /etc/environment /usr/lib/spark/conf/spark-env.sh
 
 echo "Finished bootstrapping via Miniconda, sourcing .bashrc..."
 source $HOME/.bashrc
