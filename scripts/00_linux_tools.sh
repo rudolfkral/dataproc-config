@@ -1,1 +1,1 @@
-apt-get -y install vim screen
+apt-get -y install vim screen zsh
