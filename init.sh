@@ -2,8 +2,8 @@
 
 for each in `ls scripts/*.sh | sort -V`
 do 
-	# make sure we
+	# make sure we are in the home
 	cd
-	echo "Running: $each"
+	echo "Running: $each" | tee -a $HOME/init.log 
 	bash $each | tee -a $HOME/init.log
 done

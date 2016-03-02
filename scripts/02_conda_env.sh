@@ -26,10 +26,6 @@ echo "Attempting to create conda environment: $CONDA_ENV_NAME"
 echo "Creating conda environment and installing conda packages..."
 echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
-conda create -q -n $CONDA_ENV_NAME
-source activate $CONDA_ENV_NAME
-
-echo "conda environment $CONDA_ENV_NAME created..."
 conda install $CONDA_PACKAGES
 pip install $PIP_PACKAGES
 
@@ -38,7 +34,3 @@ echo "Attempting to append .bashrc to activate conda env at login..."
 echo "Appending .bashrc to activate conda env at login.."
 sudo echo "source activate $CONDA_ENV_NAME"         >> $HOME/.bashrc
 echo ".bashrc successfully appended!"
-
-echo "Activating $CONDA_ENV_NAME environment..."
-source activate $CONDA_ENV_NAME
-
