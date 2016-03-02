@@ -28,5 +28,9 @@ exec(compile(open(os.path.join(spark_home, 'python/pyspark/shell.py')).read(), o
 _EOF
 	
 	# Start iPython Notebook on port 8123
-	nohup jupyter notebook --no-browser --ip=* --port=8123 > tee /var/log/python_notebook.log &
+	# add it to starting scripts
+	touch /etc/profile.d/start_jupyter.sh
+	chmod +x /etc/profile.d/start_jupyter.sh
+	echo "nohup jupyter notebook --no-browser --ip=* --port=8123 > tee /var/log/python_notebook.log &" | tee -a /etc/profile.d/start_jupyter.sh
+	/etc/profile.d/start_jupyter.sh
 fi
