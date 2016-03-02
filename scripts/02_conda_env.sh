@@ -27,6 +27,8 @@ echo "Creating conda environment and installing conda packages..."
 echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
 conda create -q -n $CONDA_ENV_NAME
+source activate $CONDA_ENV_NAME
+
 echo "conda environment $CONDA_ENV_NAME created..."
 conda install $CONDA_PACKAGES
 pip install $PIP_PACKAGES
