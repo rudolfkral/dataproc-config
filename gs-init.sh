@@ -2,4 +2,4 @@
 cd
 git clone https://github.com/growbots/dataproc-config.git
 cd dataproc-config
-./init.sh
+bash init.sh
