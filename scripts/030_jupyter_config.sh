@@ -32,7 +32,9 @@ exec(compile(open(os.path.join(spark_home, 'python/pyspark/shell.py')).read(), o
 _EOF
 
 	# Set configuration for Scala
-        export APACHE_SPARK_VERSION=1.6.0
+	printenv
+	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    export APACHE_SPARK_VERSION=1.6.0
 	export SPARK_HOME=/usr/lib/spark
 	cd /tmp &&
 	    echo deb http://dl.bintray.com/sbt/debian / > /etc/apt/sources.list.d/sbt.list && \

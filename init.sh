@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 for each in `ls scripts/*.sh | sort -V`
 do 
