@@ -44,7 +44,7 @@ _EOF
 	    apt-get install -yq --force-yes --no-install-recommends sbt && \
 	    cd incubator-toree && \
 	    git checkout master && \
-	    make dist SHELL=/bin/bash && \
+	    make dist SHELL=/bin/bash; make dist SHELL=/bin/bash && \
 	    mv dist/toree /opt/toree-kernel && \
 	    chmod +x /opt/toree-kernel && \
 	    rm -rf ~/.ivy2 && \
