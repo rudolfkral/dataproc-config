@@ -32,6 +32,8 @@ exec(compile(open(os.path.join(spark_home, 'python/pyspark/shell.py')).read(), o
 _EOF
 
 	# Set configuration for Scala
+        export APACHE_SPARK_VERSION=1.6.0
+	export SPARK_HOME=/usr/lib/spark
 	cd /tmp &&
 	    echo deb http://dl.bintray.com/sbt/debian / > /etc/apt/sources.list.d/sbt.list && \
 	    apt-key adv --keyserver keyserver.ubuntu.com --recv 99E82A75642AC823 && \
@@ -39,9 +41,9 @@ _EOF
 	    git clone https://github.com/apache/incubator-toree.git && \
 	    apt-get install -yq --force-yes --no-install-recommends sbt && \
 	    cd incubator-toree && \
-	    git checkout 846292233c && \
+	    git checkout master && \
 	    make dist SHELL=/bin/bash && \
-	    mv dist/toree-kernel /opt/toree-kernel && \
+	    mv dist/toree /opt/toree-kernel && \
 	    chmod +x /opt/toree-kernel && \
 	    rm -rf ~/.ivy2 && \
 	    rm -rf ~/.sbt && \
@@ -49,7 +51,6 @@ _EOF
 	    apt-get remove -y sbt && \
 	    apt-get clean
 
-	export SPARK_HOME=/usr/lib/spark
 	mkdir -p /usr/local/bin/miniconda/share/jupyter/kernels/scala
 	cp /dataproc-config/kernel.json /usr/local/bin/miniconda/share/jupyter/kernels/scala/
 
