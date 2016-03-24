@@ -5,7 +5,6 @@ set -e
 ## 0.1 conda packages to be installed
 CONDA_PACKAGES='numpy pandas scikit-learn networkx seaborn bokeh ipython Jupyter pytables'
 ## 0.2 pip packages to be installed
-PIP_PACKAGES='plotly py4j'
 
 CONDA_ENV_NAME='root'
 
@@ -27,7 +26,9 @@ echo "Creating conda environment and installing conda packages..."
 echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
 conda install $CONDA_PACKAGES
-pip install $PIP_PACKAGES
+pip install nameparser==0.3.15
+pip install py4j==0.9.2
+pip install plotly==1.9.6
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
