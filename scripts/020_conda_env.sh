@@ -26,6 +26,7 @@ echo "Creating conda environment and installing conda packages..."
 echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
 conda install $CONDA_PACKAGES
+pip install arrow==0.7.0
 pip install nameparser==0.3.15
 pip install py4j==0.9.2
 pip install plotly==1.9.6
