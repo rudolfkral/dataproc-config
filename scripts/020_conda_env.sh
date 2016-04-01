@@ -30,6 +30,7 @@ pip install arrow==0.7.0
 pip install nameparser==0.3.15
 pip install py4j==0.9.2
 pip install plotly==1.9.6
+pip install langdetect==1.0.5
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
