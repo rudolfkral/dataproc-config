@@ -3,7 +3,7 @@ set -e
 
 # 0. Specify Packages to be installed
 ## 0.1 conda packages to be installed
-CONDA_PACKAGES='numpy pandas scikit-learn networkx seaborn bokeh ipython Jupyter pytables'
+CONDA_PACKAGES='numpy pandas scikit-learn networkx seaborn bokeh ipython Jupyter pytables xgboost'
 ## 0.2 pip packages to be installed
 
 CONDA_ENV_NAME='root'
@@ -26,11 +26,7 @@ echo "Creating conda environment and installing conda packages..."
 echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
 conda install $CONDA_PACKAGES
-pip install arrow==0.7.0
-pip install nameparser==0.3.15
-pip install py4j==0.9.2
-pip install plotly==1.9.6
-pip install langdetect==1.0.5
+pip install -r requirements.txt
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
