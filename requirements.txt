@@ -40,6 +40,7 @@ snowballstemmer==1.2.1
 tables==3.2.2
 terminado==0.5
 tornado==4.3
+tqdm==4.5.0
 traitlets==4.2.1
 urllib3==1.15.1
 xgboost==0.4a30
