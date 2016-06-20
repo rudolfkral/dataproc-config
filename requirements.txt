@@ -18,6 +18,7 @@ nbconvert==4.2.0
 nbformat==4.0.1
 networkx==1.11
 numexpr==2.5.2
+PandasSelector==0.1
 path.py==0.0.0
 pexpect==4.0.1
 pickleshare==0.5
