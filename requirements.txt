@@ -24,6 +24,7 @@ pickleshare==0.5
 plotly==1.9.6
 ptyprocess==0.5
 py4j==0.9.2
+psycopg2==2.6.1
 pycosat==0.6.1
 pycrypto==2.6.1
 Pygments==2.1.3
