@@ -43,4 +43,6 @@ _EOF
 	/etc/init.d/start_jupyter.sh
 
 	echo "Jupyter notebook started"
+	
+	gsutil -m cp -r gs://ai-bucket/notebooks /workspace
 fi
