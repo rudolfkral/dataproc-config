@@ -26,7 +26,7 @@ echo "Creating conda environment and installing conda packages..."
 echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
 conda install $CONDA_PACKAGES
-pip install -r requirements.txt
+pip install -r $HOME/dataproc-config/requirements.txt
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
