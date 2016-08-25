@@ -1,6 +1,7 @@
 arrow==0.7.0
 backports.shutil-get-terminal-size==1.0.0
 beautifulsoup4==4.4.1
+click==6.6
 cycler==0.10.0
 decorator==4.0.9
 elasticsearch==2.3.0
