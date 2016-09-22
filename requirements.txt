@@ -37,5 +37,6 @@ terminado==0.5
 tldextract==2.0.1
 tqdm==4.5.0
 traitlets==4.2.1
+unidecode==0.4.19
 urllib3==1.15.1
 xgboost==0.4a30
