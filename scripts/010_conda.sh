@@ -5,9 +5,6 @@ set -e
 #ROLE=$(/usr/share/google/get_metadata_value attributes/dataproc-role)
 #if [[ "${ROLE}" == 'Master' ]]; then
 
-# Update gcloud SDK command line
-gcloud components update -q
-
 CONDA_INSTALL_PATH="/usr/local/bin/miniconda"
 PROJ_DIR="/cluster"
 
