@@ -3,7 +3,7 @@ set -e
 
 # 0. Specify Packages to be installed
 ## 0.1 conda packages to be installed
-CONDA_PACKAGES='scipy numpy pandas scikit-learn networkx numexpr seaborn bokeh ipython Jupyter pytables lxml tornado'
+CONDA_PACKAGES='scipy numpy pandas scikit-learn networkx numexpr seaborn bokeh ipython Jupyter pytables lxml tornado sqlalchemy'
 ## 0.2 pip packages to be installed
 
 CONDA_ENV_NAME='root'
