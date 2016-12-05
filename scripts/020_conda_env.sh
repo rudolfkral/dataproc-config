@@ -3,7 +3,7 @@ set -e
 
 # 0. Specify Packages to be installed
 ## 0.1 conda packages to be installed
-CONDA_PACKAGES='scipy numpy pandas scikit-learn networkx numexpr seaborn bokeh ipython Jupyter pytables lxml tornado sqlalchemy mysql-connector-python=2.0.4'
+CONDA_PACKAGES='scipy numpy pandas scikit-learn networkx numexpr seaborn bokeh ipython Jupyter pytables lxml tornado sqlalchemy mysql-connector-python=2.0.4 nltk'
 ## 0.2 pip packages to be installed
 
 CONDA_ENV_NAME='root'
@@ -27,6 +27,8 @@ echo "Installing CONDA_PACKAGES for $CONDA_ENV_NAME..."
 echo "conda packages requested: $CONDA_PACKAGES"
 conda install $CONDA_PACKAGES
 pip install -r /dataproc-config/requirements.txt
+
+python -c "import nltk; nltk.download('punkt')"
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
