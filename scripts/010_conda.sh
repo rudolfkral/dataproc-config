@@ -77,9 +77,6 @@ conda install pip anaconda-client conda-build conda-env
 conda install -n root -c conda conda-env
 pip install py4j
 
-# download nltk resources
-python -c "import nltk; nltk.download('punkt')"
-
 # 2.3 Update global profiles to add the miniconda location to PATH and PYTHONHASHSEED
 # based on: http://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux
 # and also: http://askubuntu.com/questions/391515/changing-etc-environment-did-not-affect-my-environemtn-variables
