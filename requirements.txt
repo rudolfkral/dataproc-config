@@ -40,4 +40,3 @@ traitlets==4.2.1
 unidecode==0.4.19
 urllib3==1.15.1
 xgboost==0.4a30
-spacy
