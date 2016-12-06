@@ -9,4 +9,4 @@ do
 done
 
 # running conditional code
-python scripts/conditionals.py | tee -a $HOME/init.log
+/usr/local/bin/miniconda/bin/python scripts/050_conditionals.py | tee -a $HOME/init.log
