@@ -29,7 +29,6 @@ conda install $CONDA_PACKAGES
 pip install -r /dataproc-config/requirements.txt
 
 python -c "import nltk; nltk.download('punkt')"
-python -m spacy.en.download
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
