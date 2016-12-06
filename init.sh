@@ -7,3 +7,6 @@ do
 	echo "Running: $each" | tee -a $HOME/init.log 
 	bash $each | tee -a $HOME/init.log
 done
+
+# running conditional code
+python scripts/conditionals.py | tee -a $HOME/init.log
