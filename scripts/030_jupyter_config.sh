@@ -18,6 +18,7 @@ if [[ "${ROLE}" == 'Master' ]]; then
 	echo "c.NotebookApp.ip = '*'" >>  /root/.ipython/profile_default/ipython_notebook_config.py
 	echo "c.NotebookApp.open_browser = False"  >>  /root/.ipython/profile_default/ipython_notebook_config.py
 	echo "c.NotebookApp.port = 8123" >>  /root/.ipython/profile_default/ipython_notebook_config.py
+	echo "c.NotebookApp.password = 'sha1:462bec7a7f56:a0f2bd62a34225c82a37f45edf1e44be7f662bcd'" >>  /root/.ipython/profile_default/ipython_notebook_config.py
 	
 	# Setup script for iPython Notebook so it uses the cluster's Spark
 	cat > /root/.ipython/profile_default/startup/00-pyspark-setup.py <<'_EOF'
@@ -39,7 +40,7 @@ _EOF
 	touch /var/log/python_notebook.log
 	echo "mkdir -p /workspace" >> /etc/init.d/start_jupyter.sh
 	echo "cd /workspace" >> /etc/init.d/start_jupyter.sh
-	echo "nohup ipython notebook --no-browser --ip=* --port=8123 > /var/log/python_notebook.log &" >> /etc/init.d/start_jupyter.sh
+	echo "nohup ipython notebook --config=/root/.ipython/profile_default/ipython_notebook_config.py > /var/log/python_notebook.log &" >> /etc/init.d/start_jupyter.sh
 	/etc/init.d/start_jupyter.sh
 
 	echo "Jupyter notebook started"
