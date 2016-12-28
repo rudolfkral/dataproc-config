@@ -17,7 +17,7 @@ nameparser==0.3.15
 nbconvert==4.2.0
 nbformat==4.0.1
 PandasSelector==0.1
-path.py==0.0.0
+path.py==9.0.1
 pexpect==4.0.1
 pickleshare==0.5
 plotly==1.9.6
