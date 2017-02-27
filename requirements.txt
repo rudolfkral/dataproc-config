@@ -4,7 +4,7 @@ beautifulsoup4==4.4.1
 click==6.6
 cycler==0.10.0
 decorator==4.0.9
-deepdiff==2.5.3
+deepdiff==3.1.0
 elasticsearch==2.3.0
 Jinja2==2.8
 joblib==0.9.4
