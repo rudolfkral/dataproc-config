@@ -28,8 +28,8 @@ echo "conda packages requested: $CONDA_PACKAGES"
 conda install $CONDA_PACKAGES
 pip install -r /dataproc-config/requirements.txt
 
-mkdir /home/nltk_data
-python -c "import nltk; nltk.download('punkt', download_dir='/home/nltk_data/')"
+mkdir -p /usr/share/nltk_data
+python -c "import nltk; nltk.download('punkt', download_dir='/usr/share/nltk_data/')"
 
 # 2. Append .bashrc with source activate
 echo "Attempting to append .bashrc to activate conda env at login..."
